@@ -1,0 +1,27 @@
+.navitem{
+    background-color:	#05b8ff;
+}
+.navlogin{
+    color: black;
+    background: linear-gradient(to right, #0909ffb6,#87ceeb);
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+
+    top: 0;
+    
+
+    border-radius: 30px;
+
+}
+.about{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+h5{
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+
