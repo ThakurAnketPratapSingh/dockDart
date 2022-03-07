@@ -58,11 +58,18 @@
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
+          <div class="p-5 text-center bg-image" style="
+          background-image: url('{% static 'image/mainlogo.svg' %}');
+           width: 350px; height:305px;   background-size: cover;
+        "
+      >
+          
           <h1 class="mb-3">CLOUD DART</h1>
           <h4 class="mb-3">Subheading</h4>
           <a class="btn btn-outline-light btn-lg" href="#!" role="button"
           >Call to action</a
           >
+        </div>
         </div>
       </div>
     </div>
@@ -157,7 +164,7 @@
           </div>
           <div class="col-lg-3 col-md-6 pb-4">
             <div class="text-center">
-            <img src="image/logo.jpg" alt="" width="100" height="100" class="rounded-circle">
+            <img src="{% static 'image/logo.jpg' %}" alt="" width="100" height="100" class="rounded-circle">
             <h5>Raj Kumar</h5>
           </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi explicabo ut, sit officiis exercitationem odit temporibus sunt ea ex placeat adipisci quae sed velit dolores maxime accusantium non inventore distinctio!</p>
