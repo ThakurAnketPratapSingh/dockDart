@@ -27,19 +27,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="about/about.html">About</a>
+                <a class="nav-link active" href="about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="faq/faq.html">FAQ</a>
+                <a class="nav-link active" href="faq">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="help/help.html">Help</a>
+                <a class="nav-link active" href="help">Help</a>
               </li> 
             </ul>
-              <a class="nav-link navlogin" href="login.html">
+              <a class="nav-link navlogin" href="/login">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                 </svg> SignUp</a>         
@@ -58,11 +58,18 @@
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
+          <div class="p-5 text-center bg-image" style="
+          background-image: url('{% static 'image/mainlogo.svg' %}');
+           width: 350px; height:305px;   background-size: cover;
+        "
+      >
+          
           <h1 class="mb-3">CLOUD DART</h1>
           <h4 class="mb-3">Subheading</h4>
           <a class="btn btn-outline-light btn-lg" href="#!" role="button"
           >Call to action</a
           >
+        </div>
         </div>
       </div>
     </div>
@@ -76,7 +83,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 pb-4">
             <div class="text-center">
-            <img src="profile image/anket.jpg" alt="" width="100" height="100" class="rounded-circle">
+            <img src="{% static 'profile image/anket.jpg' %}" alt="" width="100" height="100" class="rounded-circle">
             <h5>Anket Pratap Singh</h5>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut possimus ullam nesciunt sapiente consequatur! Commodi facilis voluptatibus sint ratione neque cumque, perferendis ea doloribus recusandae veritatis, at amet ducimus!</p>
@@ -117,7 +124,7 @@
           </div>
           <div class="col-lg-3 col-md-6 pb-4">
             <div class="text-center">
-            <img src="image/logo.jpg" alt="" width="100" height="100" class="rounded-circle">
+            <img src="{% static 'image/cloud.jpg' %}" alt="" width="100" height="100" class="rounded-circle">
             <h5>Ansu Kumar</h5>
           </div>
             <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat perferendis magni dignissimos itaque dolor, ex excepturi veritatis minima laborum earum tempora error neque, aperiam commodi maxime. Sunt aliquam obcaecati porro!</P>
@@ -157,7 +164,7 @@
           </div>
           <div class="col-lg-3 col-md-6 pb-4">
             <div class="text-center">
-            <img src="image/logo.jpg" alt="" width="100" height="100" class="rounded-circle">
+            <img src="{% static 'image/cloud.jpg' %}" alt="" width="100" height="100" class="rounded-circle">
             <h5>Raj Kumar</h5>
           </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi explicabo ut, sit officiis exercitationem odit temporibus sunt ea ex placeat adipisci quae sed velit dolores maxime accusantium non inventore distinctio!</p>
@@ -197,7 +204,7 @@
           </div>
           <div class="col-lg-3 col-md-6 pb-4">
             <div class="text-center">
-            <img src="image/logo.jpg" alt="" width="100" height="100" class="rounded-circle">
+            <img src="{% static 'image/cloud.jpg' %}" alt="" width="100" height="100" class="rounded-circle">
             <h5>Neeraj</h5>
           </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellat commodi incidunt dolores. Eos quisquam dolor, quo sed nemo suscipit eum, dolorem fuga, totam veniam voluptas nihil sit laboriosam aspernatur.</p>
