@@ -6,7 +6,7 @@
 .container{
     height: 100%;
     width: 100%;
-    background-image:url("static/image/cloud.jpg");
+    background-image:url("/static/image/backgroundimag.svg");
     
     position: absolute;
     background-position: center;
@@ -20,6 +20,7 @@
     background: #fff;
     padding: 5px;
     overflow: hidden;
+    border: 5px solid black;
 }
 .button-box{
     width: 220px;

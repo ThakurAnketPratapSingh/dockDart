@@ -11,7 +11,13 @@ def home(request):
 def signUp(request):
     return render(request,'login.html')
 
-def aaa(request):
-    return HttpResponse("hello")
+def about(request):
+    return render(request,'about.html')
+
+def faq(request):
+    return render(request,'faq.html')
+
+def help(request):
+    return render(request,'help.html')
 
     

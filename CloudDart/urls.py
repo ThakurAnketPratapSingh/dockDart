@@ -20,5 +20,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('cloudServices.urls')),
     path('login',include('cloudServices.urls')),
+    path('aboutt',include('cloudServices.urls')),
+    path('faq',include('cloudServices.urls')),
+    path('help',include('cloudServices.urls')),
+
 
 ]
