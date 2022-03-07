@@ -6,7 +6,8 @@
 .container{
     height: 100%;
     width: 100%;
-    background-image:url(image/cloud.jpg);
+    background-image:url("static/image/cloud.jpg");
+    
     position: absolute;
     background-position: center;
     

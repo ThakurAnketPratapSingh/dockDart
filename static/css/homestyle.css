@@ -3,9 +3,10 @@
 }
 .navlogin{
     color: black;
-    background: linear-gradient(to right, #0909ffb6,#87ceeb);
+    
+    background-color: #f47f24;
     padding: 10px;
-    width: 80px;
+    width: 100px;
     text-align: center;
 
     top: 0;

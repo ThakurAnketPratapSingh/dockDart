@@ -1,10 +1,11 @@
 <html lang="en">
+    {%load static%}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp & LogIn</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
 </head>
@@ -18,10 +19,10 @@
                 <button type="button" class="toggle-btn" onclick="login()">Log in</button>
             </div>
             <div class="social-icons">
-                <img src="image/facebook.png">
-                <img src="image/google.png">
-                <img src="image/linkedin.png">
-                <img src="image/github.png">
+                <img src="{% static 'image/google.png' %}">
+                <img src="{% static 'image/linkedin.png' %}">
+                <img src="{% static 'image/facebook.png' %}">
+                <img src="{% static 'image/github.png' %}">
             </div>
 
             <form id="signup" class="input-group">
