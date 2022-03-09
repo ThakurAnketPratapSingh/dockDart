@@ -25,11 +25,13 @@
                 <img src="{% static 'image/github.png' %}">
             </div>
 
-            <form id="signup" class="input-group">
-                <input type="text" class="input-field" placeholder="First & Last name" required>
-                <input type="text" class="input-field" placeholder="Email" required>
-                <input type="password" class="input-field" placeholder="Your password" required>
-                <input type="password" class="input-field" placeholder="Re Enter password" required>
+            <form id="signup" class="input-group" action="/login" method="post">
+                {% csrf_token %}
+                <input type="text" class="input-field" placeholder="First name" name="fname" required>
+                <input type="text" class="input-field" placeholder="Last name" name="lname" required>
+                <input type="text" class="input-field" placeholder="Email" name="email" required>
+                <input type="password" class="input-field" placeholder="Your password" name="pass1" required>
+                <input type="password" class="input-field" placeholder="Re Enter password" name="pass2" required>
                 <input type="checkbox" class="check-box"><span>I agree to the term & conditions</span>
                 <button type="submit" class="submit-btn">Create An Account</button>
             </form>
