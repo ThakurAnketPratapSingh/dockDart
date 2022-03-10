@@ -10,8 +10,7 @@ from django.http import HttpResponse
 def home(request):
     return render(request,'home.html')
 
-def signUp(request):
-    return render(request,'login.html')
+
 
 def about(request):
     return render(request,'about.html')

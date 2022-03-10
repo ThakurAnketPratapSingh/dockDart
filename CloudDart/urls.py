@@ -16,13 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
+from cloudServices import views  as cs
+from accounts import views as ac
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('cloudServices.urls')),
-    path('login',include('cloudServices.urls')),
-    path('aboutt',include('cloudServices.urls')),
-    path('faq',include('cloudServices.urls')),
-    path('help',include('cloudServices.urls')),
+    path('',cs.home),
+    path('login',ac.signUp),
+    path('about',cs.about),
+    path('faq',cs.faq),
+    path('help',cs.help),
 
 
 ]
