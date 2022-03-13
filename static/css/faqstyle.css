@@ -1,4 +1,21 @@
-body{margin-top:20px;}
+.navitem{
+    background-color:	#281c5f;
+}
+.navlogin{
+    color: white;
+    
+    background-color: #f47f24;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+
+    top: 0;
+    margin-right: 15px;
+    margin-top: 5px;
+
+    border-radius: 30px;
+
+}
 .section_padding_130 {
     padding-top: 130px;
     padding-bottom: 130px;

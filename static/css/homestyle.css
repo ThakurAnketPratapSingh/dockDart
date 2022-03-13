@@ -1,8 +1,8 @@
 .navitem{
-    background-color:	#05b8ff;
+    background-color:	#281c5f;
 }
 .navlogin{
-    color: black;
+    color: white;
     
     background-color: #f47f24;
     padding: 10px;
@@ -10,7 +10,8 @@
     text-align: center;
 
     top: 0;
-    
+    margin-right: 15px;
+    margin-top: 5px;
 
     border-radius: 30px;
 

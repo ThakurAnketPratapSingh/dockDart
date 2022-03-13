@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-black navitem">
+    <nav class="navbar navbar-expand-lg navbar-dark navitem">
         <div class="container-fluid">
         
           <a class="navbar-brand" href="#">
-            <img src="{% static 'image/logo.svg' %}" alt="" width="100" height="40" class="">
+            <img src="{% static 'image/mainlogo.svg' %}" alt="" width="100" height="40" class="">
             
           </a>  
              
@@ -39,10 +39,14 @@
                 <a class="nav-link active" href="help">Help</a>
               </li> 
             </ul>
-              <a class="nav-link navlogin" href="/login">
+              <a class="nav-link navlogin" href="Signup">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg> SignUp</a>         
+                </svg> Sign Up</a>  
+                <a class="nav-link navlogin" href="Signin">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                    <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                  </svg>Sign In</a>       
           </div>
         </div>
        </nav>
@@ -64,13 +68,12 @@
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
           <div class="p-5 text-center bg-image" style="
-          background-image: url('{% static 'image/mainlogo.svg' %}');
-           width: 350px; height:305px;   background-size: cover;
+          background-image: url('{% static 'image/logo.svg' %}');
+           width: 682px; height:305px;   background-size: cover;
         "
       >
           
-          <h1 class="mb-3">CLOUD DART</h1>
-          <h4 class="mb-3">Subheading</h4>
+          
           <a class="btn btn-outline-light btn-lg" href="#!" role="button"
           >Call to action</a
           >
