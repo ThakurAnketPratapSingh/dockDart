@@ -53,7 +53,13 @@
         </div>
        </nav>
 
-
+       {% for message in messages %}
+       <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+           <strong>Message:</strong> {{message}}
+           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+       </div>
+       {% endfor %}
+       
        <section class="ftco-section">
 		<div class="container">
 			
@@ -74,7 +80,8 @@
 									</p>
 								</div>
 			      	</div>
-							<form id="signup" action="/signup" class="signin-form" method="post">
+              <form id="signup" action="/Signup" class="signin-form" method="post">
+                {% csrf_token %}
                 <div class="row">
                                 <div class="form-group col-6 mb-3">
                                     <label class="label" for="name">First Name</label>

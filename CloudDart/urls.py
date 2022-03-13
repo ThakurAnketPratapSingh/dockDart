@@ -25,6 +25,7 @@ urlpatterns = [
     path('',cs.home),
     path('Signup',ac.signUp),
     path('Signin',ac.signIn),
+    path('Logout',ac.Logout),
     path('about',cs.about),
     path('faq',cs.faq),
     path('help',cs.help),

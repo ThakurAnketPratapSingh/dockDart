@@ -39,6 +39,14 @@
                 <a class="nav-link active" href="help">Help</a>
               </li> 
             </ul>
+              {% if user.is_authenticated %}
+              <h5 style="color: white;" class="px-5"> Welcome {{request.user}}  </h4>
+              
+              <a class="nav-link navlogin" href="Logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg> Logout </a>
+              {%  else %}
               <a class="nav-link navlogin" href="Signup">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -46,7 +54,8 @@
                 <a class="nav-link navlogin" href="Signin">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
                     <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                  </svg>Sign In</a>       
+                  </svg>Sign In</a> 
+              {% endif %}      
           </div>
         </div>
        </nav>
