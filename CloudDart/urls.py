@@ -23,7 +23,8 @@ from accounts import views as ac
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',cs.home),
-    path('login',ac.signUp),
+    path('Signup',ac.signUp),
+    path('Signin',ac.signIn),
     path('about',cs.about),
     path('faq',cs.faq),
     path('help',cs.help),

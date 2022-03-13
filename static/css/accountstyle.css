@@ -1,0 +1,216 @@
+body {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: normal;
+    background: #f8f9fd;
+    color: gray;
+    }
+.navitem{
+    background-color:	#281c5f;
+}
+.navlogin{
+    color: white;
+    
+    background-color: #f47f24;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+
+    top: 0;
+    
+
+    border-radius: 30px;
+
+}
+.about{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+h5{
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+.social-media .social-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 50%;
+    }
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    }
+.social-media .social-icon span {
+     color: #999999; }
+.social-media .social-icon:hover, .social-media .social-icon:focus {
+    background: #f47f24; }
+.social-media .social-icon:hover span, .social-media .social-icon:focus span {
+        color: #fff; }
+.btn.btn-primary {
+    background: #f47f24 !important;
+    border: 1px solid #f47f24 !important;
+    color: #fff !important;
+    }
+.form-control {
+    height: 48px;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.img {
+   margin-left: 10px;           
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+          
+.wrap {
+   width: 100%;
+   overflow: hidden;
+   background: #fff;
+   border-radius: 5px;
+   -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+   -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+   box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+          
+.img, .login-wrap {
+   width: 50%;
+}
+@media (max-width: 991.98px) {
+   .img, .login-wrap {
+        width: 100%;
+  } }
+          
+ @media (max-width: 767.98px) {
+   .wrap .img {
+    height: 250px;
+  } }
+          
+.login-wrap {
+    position: relative;
+    background: #fff h3;
+    background-font-weight: 300; }
+          
+.form-group {
+    position: relative; }
+.form-group .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: 700; }
+.form-group a {
+    color: gray; }
+
+              
+
+.form-control:focus, .form-control:active {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #f47f24; }
+.container {
+       
+    width: 100%;        
+    padding-top: 35px;   
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; }
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+.aa:hover {
+    color: #0056b3;
+    text-decoration: underline; 
+}
+.asign{
+  color: #f47f24;
+}
+@media (min-width: 768px) {
+  .text-md-left {
+    text-align: left !important; }
+  .text-md-right {
+    text-align: right !important;
+    }
+  .text-md-center {
+    text-align: center !important;
+  } }
+  .checkbox-wrap {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-wrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "\f0c8";
+    font-family: "FontAwesome";
+    position: absolute;
+    color: rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    margin-top: -4px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    @media (prefers-reduced-motion: reduce) {
+      .checkmark:after {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none; } }
+  
+  /* Show the checkmark when checked */
+  .checkbox-wrap input:checked ~ .checkmark:after {
+    display: block;
+    content: "\f14a";
+    font-family: "FontAwesome";
+    color: rgba(0, 0, 0, 0.2); }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-primary {
+    color: #f47f24; }
+    .checkbox-primary input:checked ~ .checkmark:after {
+      color: #f47f24; }
+
+.pad{
+  padding-top: 20px;
+}

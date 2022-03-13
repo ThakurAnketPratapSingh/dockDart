@@ -37,4 +37,8 @@ def signUp(request):
             return redirect('/login')
         return redirect('/')
     else:
-        return render(request,'login.html')
+        return render(request,'signup.html')
+
+
+def signIn(request):
+    return render(request,'signin.html')
