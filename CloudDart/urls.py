@@ -23,12 +23,14 @@ from accounts import views as ac
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',cs.home),
+    path("accounts/", include("allauth.urls")),
     path('Signup',ac.signUp),
     path('Signin',ac.signIn),
     path('Logout',ac.Logout),
     path('about',cs.about),
     path('faq',cs.faq),
     path('help',cs.help),
+    path("", ac.Home.as_view(), name="home"),
 
 
 ]

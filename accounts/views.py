@@ -3,7 +3,11 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User , auth
-# Create your views here.
+
+from django.views.generic import TemplateView
+class Home(TemplateView):
+    template_name = "home.html"
+
 def signUp(request):
     if request.method=='POST':
         first_name=request.POST['fname']
