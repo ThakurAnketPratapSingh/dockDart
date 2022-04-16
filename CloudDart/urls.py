@@ -30,6 +30,9 @@ urlpatterns = [
     path('about',cs.about),
     path('faq',cs.faq),
     path('help',cs.help),
+    path('dockfile',cs.docimg),
+    path('selectproject',cs.selectproject),
+    path('dockrun',cs.webdock),
     path("", ac.Home.as_view(), name="home"),
 
 

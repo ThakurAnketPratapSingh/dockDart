@@ -1,0 +1,75 @@
+.web{
+    padding:20px;
+}
+.btn{
+    color: #f47f24;
+    border-color: #f47f24;
+}
+.btn-div >button:hover{
+    background-color: #f47f24;
+    color: white;
+}
+#input-box{
+    width:100%;
+    height: 38px;
+    font-size: 20px;
+    
+}
+
+#input-btn{
+    margin: 20px 0px;
+    padding: 8px 14px 8px 14px;
+   
+}
+.btn-div{
+    text-align: right;
+}
+.img-div{
+    text-align: left;
+
+}
+.con-div{
+    text-align: right;
+  
+}
+.btn2{
+    justify-content: space-around;
+    
+}
+#con-btn{
+    width: 146px;
+}
+#img-btn{
+    width: 146px;
+}
+/**navigation css start*/
+.navitem {
+    background-color: #281c5f;
+    position: sticky;
+    top: 0px;
+}
+
+
+.sidenav {
+    background-color:#39229f;
+
+}
+.profile{
+   padding-right: 50px;
+}
+/**navigation css end*/
+.form-control {
+    height: 50px;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.form-control:focus, .form-control:active {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #f47f24; }

@@ -1,0 +1,42 @@
+/*.a-div{
+    padding: 40px 40px 40px 40px;
+    background-color: aqua;
+    
+}
+
+a:hover{
+    color:orange;
+    padding: 40px 40px 40px 40px;
+    background-color: blue;
+    height: 40px;
+    width: 40px;
+}
+**/
+.a-div{
+    height:100px;
+    width: 100px;
+}
+.item{
+    margin-top: 20%;
+    text-align: center; 
+    
+}
+.item >a:hover{
+    color:#f47f24;
+}
+/**navigation css start*/
+.navitem {
+    background-color: #281c5f;
+    position: sticky;
+    top: 0px;
+}
+
+
+.sidenav {
+    background-color:#39229f;
+
+}
+.profile{
+   padding-right: 50px;
+}
+/**navigation css end*/

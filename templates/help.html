@@ -1,5 +1,7 @@
 <!doctype html>
+{%load static%}
 <html lang="en">
+  {% load socialaccount %}
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,13 +9,59 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
     <title>Help page</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark navitem">
+      <div class="container-fluid">
+      
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'image/mainlogo.png' %}" alt="" width="50" height="30" class="">
+          
+        </a>  
+           
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="help">Help</a>
+            </li> 
+          </ul>
+            {% if user.is_authenticated %}
+            <h5 style="color: white;" class="px-5"> Welcome {{request.user}}  </h4>
+            
+            <a class="nav-link navlogin" href="Logout">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg> Logout </a>
+            {%  else %}
+            <a class="nav-link navlogin" href="Signup">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg> Sign Up</a>  
+              <a class="nav-link navlogin" href="Signin">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                  <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>Sign In</a> 
+            {% endif %}      
+        </div>
+      </div>
+     </nav>
     <h1>This is Help page</h1>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'clouddart',
         'HOST':'localhost',
         'USER':'postgres',
-        'PASSWORD':'YOUR_DB_PASSWORD',
+        'PASSWORD':'9161',
     }
 }
 

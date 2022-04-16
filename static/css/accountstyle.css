@@ -70,7 +70,8 @@ h5{
 }
 
 .img {
-   margin-left: 10px;           
+  background-color: #281c5f;
+   margin-left: 0px;           
    background-repeat: no-repeat;
    background-position: center center;
 }

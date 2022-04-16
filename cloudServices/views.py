@@ -21,4 +21,13 @@ def faq(request):
 def help(request):
     return render(request,'help.html')
 
+def docimg(request):
+    return render(request,'docimg.html')
+
+def selectproject(request):
+    return render(request,'selectproject.html')
+
+def webdock(request):
+    return render(request,'webdock.html')
+
     
