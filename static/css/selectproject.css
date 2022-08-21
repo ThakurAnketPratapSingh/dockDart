@@ -12,6 +12,9 @@ a:hover{
     width: 40px;
 }
 **/
+body{
+    margin-top: 0px;
+}
 .a-div{
     height:100px;
     width: 100px;
@@ -24,7 +27,19 @@ a:hover{
 .item >a:hover{
     color:#f47f24;
 }
+.btn-col {
+    background-color: #f47f24;
+    color: white;
+  }
+  .form-control:focus, .form-control:active {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #f47f24; }
 /**navigation css start*/
+.ap{
+    background-color: #281c5f;
+}
 .navitem {
     background-color: #281c5f;
     position: sticky;

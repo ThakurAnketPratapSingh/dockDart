@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-
+from django.conf import settings
+from django.conf.urls.static import static
 from cloudServices import views  as cs
 from accounts import views as ac
+from dockrun import views as dc
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,13 +28,16 @@ urlpatterns = [
     path('Signup',ac.signUp),
     path('Signin',ac.signIn),
     path('Logout',ac.Logout),
+    path('profileWithData',ac.profileWithData),
+    path('profilEditData',ac.profilEditData),
     path('about',cs.about),
     path('faq',cs.faq),
     path('help',cs.help),
-    path('dockfile',cs.docimg),
     path('selectproject',cs.selectproject),
-    path('dockrun',cs.webdock),
+    path('projectdata',cs.projectData),
+    path('dockrun',dc.webdock),
+    path('dockfile',dc.docimg),
     path("", ac.Home.as_view(), name="home"),
 
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

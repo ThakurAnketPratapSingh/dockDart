@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+
     <link rel="stylesheet" href="{% static 'css/webdock.css' %}">
     <title>Web Dock</title>
 </head>
@@ -31,17 +31,23 @@
             <div class="dropdown profile ">
                 <a href="#" class="d-flex text-white align-items-center text-white text-decoration-none dropdown-toggle"
                     id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                    <span class="d-none d-sm-inline mx-1">loser</span>
+                    {% if user.userdata.photo %}
+                    <img src="/media/{{user.userdata.photo}}" alt="hugenerd" width="30" height="30"
+                        class="rounded-circle">
+                    {% else %}
+                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="hugenerd" width="30" height="30"
+                        class="rounded-circle">
+                    {% endif %}
+                    <span class="d-none d-sm-inline mx-1">{{user.username}}</span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                    <li><a class="dropdown-item text-white" href="#">New project...</a></li>
+                <ul class="dropdown-menu dropdown-menu-dark ap text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item text-white" href="selectproject">Project</a></li>
                     <li><a class="dropdown-item text-white" href="#">Settings</a></li>
-                    <li><a class="dropdown-item text-white" href="#">Profile</a></li>
+                    <li><a class="dropdown-item text-white" href="profileWithData">Profile</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item text-white" href="#">Sign out</a></li>
+                    <li><a class="dropdown-item text-white" href="Logout">Sign out</a></li>
                 </ul>
             </div>
 
@@ -59,7 +65,7 @@
                         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                             id="menu">
                             <li class="nav-item tex">
-                                <a href="#" class="nav-link text-white align-middle px-0">
+                                <a href="/" class="nav-link text-white align-middle px-0">
                                     <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
                                 </a>
                             </li>
@@ -91,7 +97,7 @@
 
 
                             <li>
-                                <a href="#" class="nav-link px-0 text-white align-middle">
+                                <a href="help" class="nav-link px-0 text-white align-middle">
                                     <i class="fs-4 bi bi-question-circle"></i><span
                                         class="ms-1 d-none d-sm-inline">Help</span>
                                 </a>
@@ -110,15 +116,19 @@
                             <h2><b>Docker Run</b></h2>
                         </div>
                         <div>
-                            <input type="text" class="form-control" id="input-box" required>
+                            <form id="run" action="/dockrun" class="webdock" method="post">
+                                {%csrf_token%}
+                                <input type="text" class="form-control" id="dockrun" name="cmd">
                         </div>
                         <div class="btn-div">
-                            <button class="btn"  id="input-btn" onclick="exe()">
+                            <button type="submit" class="btn" id="input-btn" name="contimg" value="run">
                                 RUN
                                 <i class="fas fa-running"></i>
                             </button>
+
                         </div>
                     </div>
+
                     <div class="col-3"></div>
                 </div>
                 <div class="row">
@@ -126,14 +136,16 @@
                     <div class="col-8">
                         <div class="row btn2">
                             <div class="img-div btn-div col-3">
-                                <button class="btn" id="img-btn" onclick="img()">
+
+                                <button type="submit" class="btn" id="img-btn" name="contimg" value="showimg">
                                     <i class="far fa-clone"></i>
                                     Show Images
                                 </button>
                             </div>
+
                             <div class="col-2"></div>
                             <div class="con-div btn-div col-3">
-                                <button class="btn" id="con-btn" onclick="lvcon()">
+                                <button type="submit" class="btn" id="con-btn" name="contimg" value="container">
                                     <i class="fas fa-th-large"></i>
                                     Containers
                                 </button>
@@ -141,19 +153,30 @@
 
                         </div>
                     </div>
+                    </form>
                     <div class="col-2"></div>
                 </div>
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col-8">
-                        <pre><p id = "outdiv"></p></pre>
+                        <pre id="outdiv">{% for message in messages %}{{message}}
+                             {% endfor %}
+                        </pre>
                     </div>
                     <div class="col-4"></div>
                 </div>
 
+
             </div>
 
+            <style>
+                #outdiv {
 
+                    margin-top: 50px;
+                    font-size: medium;
+                    background-color: #f5f5ff;
+                }
+            </style>
 
             <!-- Option 1: Bootstrap Bundle with Popper -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

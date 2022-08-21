@@ -27,17 +27,23 @@
             <div class="dropdown profile ">
                 <a href="#" class="d-flex text-white align-items-center text-white text-decoration-none dropdown-toggle"
                     id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                    <span class="d-none d-sm-inline mx-1">loser</span>
+                    {% if user.userdata.photo %}
+                    <img src="/media/{{user.userdata.photo}}" alt="hugenerd" width="30" height="30"
+                        class="rounded-circle">
+                    {% else %}
+                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="hugenerd" width="30" height="30"
+                        class="rounded-circle">
+                    {% endif %}
+                    <span class="d-none d-sm-inline mx-1">{{user.username}}</span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                    <li><a class="dropdown-item text-white" href="#">New project...</a></li>
+                <ul class="dropdown-menu dropdown-menu-dark ap text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item text-white" href="selectproject">Project</a></li>
                     <li><a class="dropdown-item text-white" href="#">Settings</a></li>
-                    <li><a class="dropdown-item text-white" href="#">Profile</a></li>
+                    <li><a class="dropdown-item text-white" href="profileWithData">Profile</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item text-white" href="#">Sign out</a></li>
+                    <li><a class="dropdown-item text-white" href="Logout">Sign out</a></li>
                 </ul>
             </div>
 
@@ -50,77 +56,79 @@
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0  sidenav">
                 <nav class="nav2">
                     <div
-                    class="d-flex flex-column align-items-center  align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                        class="d-flex flex-column align-items-center  align-items-sm-start px-3 pt-2 text-white min-vh-100">
 
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                        id="menu">
-                        <li class="nav-item tex">
-                            <a href="#" class="nav-link text-white align-middle px-0">
-                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-                            </a>
-                        </li>
-                        <li class="nav-item tex">
-                            <a href="selectproject" class="nav-link text-white align-middle px-0">
-                                <i class="fs-4 bi bi-plus-circle"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Project</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#submenu1" data-bs-toggle="collapse"
-                                class="nav-link text-white  px-0 align-middle">
-                                <i class="fs-4 bi-speedometer2"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Services</span> </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="dockrun" class="nav-link text-white px-0">
-                                        <i class="fs-6 bi bi-arrow-right-circle"></i> <span
-                                            class="d-none d-sm-inline">Docker Run</span></a>
-                                </li>
-                                <li>
-                                    <a href="dockfile" class="nav-link text-white px-0">
-                                        <i class="fs-6 bi bi-arrow-right-circle"></i> <span
-                                            class="d-none d-sm-inline">Docker File</span></a>
-                                </li>
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                            id="menu">
+                            <li class="nav-item tex">
+                                <a href="/" class="nav-link text-white align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item tex">
+                                <a href="selectproject" class="nav-link text-white align-middle px-0">
+                                    <i class="fs-4 bi bi-plus-circle"></i> <span
+                                        class="ms-1 d-none d-sm-inline">Project</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#submenu1" data-bs-toggle="collapse"
+                                    class="nav-link text-white  px-0 align-middle">
+                                    <i class="fs-4 bi-speedometer2"></i> <span
+                                        class="ms-1 d-none d-sm-inline">Services</span> </a>
+                                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="dockrun" class="nav-link text-white px-0">
+                                            <i class="fs-6 bi bi-arrow-right-circle"></i> <span
+                                                class="d-none d-sm-inline">Docker Run</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="dockfile" class="nav-link text-white px-0">
+                                            <i class="fs-6 bi bi-arrow-right-circle"></i> <span
+                                                class="d-none d-sm-inline">Docker File</span></a>
+                                    </li>
 
-                            </ul>
-                        </li>
-
-
-                        <li>
-                            <a href="#" class="nav-link px-0 text-white align-middle">
-                                <i class="fs-4 bi bi-question-circle"></i><span
-                                    class="ms-1 d-none d-sm-inline">Help</span>
-                            </a>
-                        </li>
-                    </ul>
+                                </ul>
+                            </li>
 
 
-                </div>
+                            <li>
+                                <a href="help" class="nav-link px-0 text-white align-middle">
+                                    <i class="fs-4 bi bi-question-circle"></i><span
+                                        class="ms-1 d-none d-sm-inline">Help</span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+                    </div>
                 </nav>
             </div>
             <div class="col py-3">
-                
-                <form action="http://IP/cgi-bin/df.py">
-                    <div class="row">
 
-                        <div class="col-2"></div>
-                        <div class="col-8">
-                            <h2><b>Docker File</b></h2>
+                <div class="row">
 
-                            <textarea rows="16" id="ta" class="form-control" name="co">
-                     </textarea>
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <h2><b>Docker File</b></h2>
+                        <form id="dockerfile" action="/dockfile" class="webdock" method="post">
+                            {%csrf_token%}
+                            <textarea rows="12" id="ta" class="form-control" name="dockcode"></textarea>
                             <div class="row row-div2">
                                 <div class="col-6 div-cls">
-                                    <input type="text" id="in" class="form-control" placeholder="image name" name="na" />
+                                    <input type="text" id="in" class="form-control" placeholder="image name"
+                                        name="imgname" />
                                 </div>
                                 <div class="col-6 div-cls">
-                                    <input type="text" id="iv" class="form-control" placeholder="image version" name="ver" />
+                                    <input type="text" id="iv" class="form-control" placeholder="image version"
+                                        name="imgversion" />
                                 </div>
                                 <div class="col-6 div-cls">
                                     <input type="text" id="un" class="form-control" placeholder="username" name="user">
                                 </div>
                                 <div class="col-6 div-cls">
-                                    <input type="password" id="pa" class="form-control" placeholder="password" name="pass">
+                                    <input type="password" id="pa" class="form-control" placeholder="password"
+                                        name="pass">
                                 </div>
                                 <div class="col-12 div-cls">
                                     <button type="submit" class="btn" id="ss" style="font-family:Tahoma">
@@ -129,10 +137,31 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-1"></div>
                     </div>
+                    <div class="col-1"></div>
+                </div>
                 </form>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <pre id="outdiv">{% for message in messages %}{{message}}
+                             {% endfor %}
+                        </pre>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+
+
+
+
+                <style>
+                    #outdiv {
+
+                        margin-top: 50px;
+                        font-size: medium;
+                        background-color: #f5f5ff;
+                    }
+                </style>
             </div>
         </div>
     </div>

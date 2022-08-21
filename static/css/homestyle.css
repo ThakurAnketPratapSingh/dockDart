@@ -1,6 +1,9 @@
 .navitem{
     background-color:	#281c5f;
 }
+.fn{
+    font-size: large;
+}
 .navlogin{
     color: white;
     
@@ -16,6 +19,9 @@
     border-radius: 30px;
 
 }
+.profile{
+    padding-right: 50px;
+ }
 .about{
     text-align: center;
     padding-top: 25px;
